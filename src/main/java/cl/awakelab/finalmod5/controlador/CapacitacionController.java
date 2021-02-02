@@ -17,7 +17,7 @@ import cl.awakelab.finalmod5.modelo.Capacitacion;
 import cl.awakelab.finalmod5.servicio.CapacitacionServicio;
 
 
-
+// Hola chicos!
 
 @Controller
 public class CapacitacionController {
