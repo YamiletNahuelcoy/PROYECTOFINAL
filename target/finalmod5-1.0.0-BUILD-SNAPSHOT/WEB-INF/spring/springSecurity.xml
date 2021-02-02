@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/security 
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<!-- Páginas a las que va a poder acceder el usuario -->
+	<http auto-config="true">
+		<intercept-url pattern="/" access="permitAll" /><!-- Todos los usuarios van a poder acceder a la ruta raíz -->
+		<intercept-url pattern="/CrearCapacitacion" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/procesacapacitacion" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/listaCapacitaciones/**" access="hasRole('USUARIO')" />
+		<intercept-url pattern="/eliminar/**" access="hasRole('USUARIO')" />
+		<intercept-url pattern="/editar/**" access="hasRole('ADMIN')" />
+		
+			<form-login 
+				login-page="/login"
+				authentication-failure-url="/error"
+				       username-parameter="username"
+				       password-parameter="password"
+				/>
+				<csrf disabled="true"/>
+				<logout logout-success-url="/login" />
+		
+	</http>
+ <!-- Definición de usuarios y roles -->
+	<!-- <authentication-manager>
+		<authentication-provider>
+		<user-service>
+			<user name="yamilet" password="{noop}1234" authorities="ROLE_ADMIN" />
+			<user name="daniela" password="{noop}5678" authorities="ROLE_USUARIO" />
+			<user name="jpablo" password="{noop}5678" authorities="ROLE_USUARIO, ROLE_ADMIN" />
+		</user-service>
+		</authentication-provider>
+	</authentication-manager>-->
+	
+	<authentication-manager>
+		<authentication-provider>
+		<password-encoder hash="bcrypt"/> <!--PROVEEDOR DE AUTENTICACIÓN NOS ENTREGA UN TIPO DE ENCRIPTACIÓN -->
+		    <jdbc-user-service data-source-ref="dataSource"
+		            users-by-username-query=" 
+		    select login as username, clave as password, 1 as enabled from usuario where login=?"
+		
+		            authorities-by-username-query="select u.login as username, ur.rol as authority from usuario u, perfilusuario ur 
+		where u.idusuario = ur.usuario_idusuario and u.idusuario = (SELECT idusuario from usuario where login = ?)" />
+		</authentication-provider>
+	</authentication-manager>
+	
+</bean:beans>
