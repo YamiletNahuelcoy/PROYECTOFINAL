@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import cl.awakelab.finalmod5.modelo.Cliente;
 import cl.awakelab.finalmod5.servicio.ClienteServicio;
 
-
-
 @Controller
 public class ClienteController {
 

@@ -15,6 +15,7 @@
 		<intercept-url pattern="/listaCapacitaciones/**" access="hasRole('USUARIO')" />
 		<intercept-url pattern="/eliminar/**" access="hasRole('USUARIO')" />
 		<intercept-url pattern="/editar/**" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/listaPagos/*" access="hasRole('ADMIN','USER')" />
 		
 			<form-login 
 				login-page="/login"

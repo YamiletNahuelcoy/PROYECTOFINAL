@@ -23,7 +23,8 @@
 				<ul>
 				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
-				<li><a href="<%=request.getContextPath()%>/listaClientes">Lista de Clientes</a></li>	
+				<li><a href="<%=request.getContextPath()%>/listaClientes">Lista de Clientes</a></li>
+				<li><a href="<%=request.getContextPath()%>//listaPagos">Pagos</a></li>			
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
 				</ul>

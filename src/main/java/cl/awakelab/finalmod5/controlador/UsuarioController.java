@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import cl.awakelab.finalmod5.modelo.Usuario;
 import cl.awakelab.finalmod5.servicio.UsuarioServicio;
 
+
 @Controller
 public class UsuarioController {
 
 	@Autowired
 	UsuarioServicio uss;
-	private static final Logger logger = LoggerFactory.getLogger(CapacitacionController.class);
+	private static final Logger logger = LoggerFactory.getLogger(UsuarioController.class);
 	
 	@RequestMapping(value="/listaUsuarios", method = RequestMethod.GET)
 	public String ListarUsuarios(Model model) {
