@@ -20,4 +20,11 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 		return (List<Usuario>) ur.findAll();
 	}
 
+	@Override
+	public boolean creaUsuario(Usuario us) {
+		ur.save(us);
+		return true;
+
+	}
+
 }

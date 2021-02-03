@@ -49,15 +49,8 @@
 					<td><c:out value="${lp.getPagoAño()}" /></td>
 					<td><c:out value="${lp.getCliente_RutCliente()}" /></td>
 					
-					  <td>
-					<input type="button" value="Eliminar" name="eliminar" onclick="location.href='<c:out value="${pageContext.request.contextPath}" />/eliminar/<c:out value="${lp.getiDCapacitacion()}" />'" />
-					
-				</td>
-				<td>
-				<input type="button" value="Editar" name="editar" onclick="location.href='<c:out value="${pageContext.request.contextPath}" />/editar/<c:out value="${lp.getiDCapacitacion()}" />'" />
-				  <!-- <a href='<c:out value="${pageContext.request.contextPath}" />/editar/<c:out value="${lc.getiDCapacitacion()}" />'>Editar</a> -->
-									
-				</tr>
+			</tr>
+			
 			</c:forEach>
 
 		</table>

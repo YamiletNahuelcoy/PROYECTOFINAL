@@ -37,7 +37,7 @@
 	<fieldset class="cel- agrupar-t agrupar-e">
 		<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesareditar'>
 			<table class="tablausr-t tablausr-e">	
-					<tr><td>Id Usuario</td><td><input type="text" name="txtidclieuser" id="txtidclieuser" value='<c:out value="${us.getCliente_idusuario()}" />' readonly="readonly" /></td></tr>		
+					<tr><td>Id Usuario</td><td><input type="text" name="txtidclieuser" id="txtidclieuser" value='<c:out value="${us.getUsuario_idusuario()}" />' readonly="readonly" /></td></tr>		
 					<tr><td >RUT</td><td><input type="text" name="txtrutcliente" id="txtrutcliente" value='<c:out value="${us.getRutCliente()}" />' readonly="readonly"/></td></tr>
 					<tr><td>Nombre</td><td><input type="text" name="txtnomcliente" id="txtnomcliente" value='<c:out value="${us.getClienombres()}" />' /></td></tr>
 					<tr><td>Apellidos</td><td><input type="text" name="txtapecliente" id="txtapecliente" value='<c:out value="${us.getCliapellidos()}" />'/></td></tr>

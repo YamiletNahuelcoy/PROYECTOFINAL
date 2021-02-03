@@ -28,7 +28,7 @@
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
 			<!-- EDITAR LUEGO.... AGREGUE LA LINEA DE ABAJO SOLO PARA VER LA LISTA DE VISITAS -->  
-				<li><a href="<%=request.getContextPath()%>/FormListaVisitas">LisVisit</a></li>				
+				<li><a href="<%=request.getContextPath()%>/listaVisitas">LisVisit</a></li>				
 				</ul>
 			</nav>
       

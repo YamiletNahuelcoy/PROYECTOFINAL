@@ -15,7 +15,7 @@
 		<intercept-url pattern="/listaCapacitaciones/**" access="hasRole('USUARIO')" />
 		<intercept-url pattern="/eliminar/**" access="hasRole('USUARIO')" />
 		<intercept-url pattern="/editar/**" access="hasRole('ADMIN')" />
-		<intercept-url pattern="/listaPagos/**" access="hasRole('USUARIO')" />
+		<intercept-url pattern="/listaPagos/*" access="hasRole('ADMIN','USER')" />
 		
 			<form-login 
 				login-page="/login"
@@ -34,6 +34,7 @@
 			<user name="yamilet" password="{noop}1234" authorities="ROLE_ADMIN" />
 			<user name="daniela" password="{noop}5678" authorities="ROLE_USUARIO" />
 			<user name="jpablo" password="{noop}5678" authorities="ROLE_USUARIO, ROLE_ADMIN" />
+			<user name="Fernando" password="{noop}5678" authorities="ROLE_USUARIO" />
 		</user-service>
 		</authentication-provider>
 	</authentication-manager>-->

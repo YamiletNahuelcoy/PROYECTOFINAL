@@ -1,5 +1,8 @@
 package cl.awakelab.finalmod5.modelo;
 
+import java.sql.Date;
+import java.sql.Time;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -8,8 +11,8 @@ public class Visita {
 	
 	@Id
 	private int idVisita;
-	private String Visfecha;
-	private String Vishora;
+	private Date Visfecha;
+	private Time Vishora;
 	private String Vislugar;
 	private String Viscomentarios;
 	private String Cliente_rutcliente;
@@ -18,9 +21,7 @@ public class Visita {
 		super();
 	}
 
-	
-	
-	public Visita(int idVisita, String visfecha, String vishora, String vislugar, String viscomentarios,
+	public Visita(int idVisita, Date visfecha, Time vishora, String vislugar, String viscomentarios,
 			String cliente_rutcliente) {
 		super();
 		this.idVisita = idVisita;
@@ -31,79 +32,60 @@ public class Visita {
 		Cliente_rutcliente = cliente_rutcliente;
 	}
 
-	
-
 	public int getIdVisita() {
 		return idVisita;
 	}
-
 
 	public void setIdVisita(int idVisita) {
 		this.idVisita = idVisita;
 	}
 
-
-	public String getVisfecha() {
+	public Date getVisfecha() {
 		return Visfecha;
 	}
 
-
-	public void setVisfecha(String visfecha) {
+	public void setVisfecha(Date visfecha) {
 		Visfecha = visfecha;
 	}
 
-
-	public String getVishora() {
+	public Time getVishora() {
 		return Vishora;
 	}
 
-	
-	public void setVishora(String vishora) {
+	public void setVishora(Time vishora) {
 		Vishora = vishora;
 	}
-
 
 	public String getVislugar() {
 		return Vislugar;
 	}
 
-
 	public void setVislugar(String vislugar) {
 		Vislugar = vislugar;
 	}
-
 
 	public String getViscomentarios() {
 		return Viscomentarios;
 	}
 
-
 	public void setViscomentarios(String viscomentarios) {
 		Viscomentarios = viscomentarios;
 	}
-
 
 	public String getCliente_rutcliente() {
 		return Cliente_rutcliente;
 	}
 
-
 	public void setCliente_rutcliente(String cliente_rutcliente) {
 		Cliente_rutcliente = cliente_rutcliente;
 	}
 
-
-		
-
 	@Override
 	public String toString() {
 		return "Visita [idVisita=" + idVisita + ", Visfecha=" + Visfecha + ", Vishora=" + Vishora + ", Vislugar="
-				+ Vislugar + ", Viscomentarios=" + Viscomentarios + ", Cliente_rutcliente=" + Cliente_rutcliente
-				+ ", getIdVisita()=" + getIdVisita() + ", getVisfecha()=" + getVisfecha() + ", getVishora()="
-				+ getVishora() + ", getVislugar()=" + getVislugar() + ", getViscomentarios()=" + getViscomentarios()
-				+ ", getCliente_rutcliente()=" + getCliente_rutcliente() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+				+ Vislugar + ", Viscomentarios=" + Viscomentarios + ", Cliente_rutcliente=" + Cliente_rutcliente + "]";
 	}
 
-
+	
+	
 }
