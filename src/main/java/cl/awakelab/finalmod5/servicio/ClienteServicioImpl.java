@@ -9,7 +9,6 @@ import cl.awakelab.finalmod5.modelo.Cliente;
 import cl.awakelab.finalmod5.modelo.ClienteRepositorio;
 
 
-
 @Service
 public class ClienteServicioImpl implements ClienteServicio {
 
@@ -21,5 +20,19 @@ public class ClienteServicioImpl implements ClienteServicio {
 		
 		return (List<Cliente>) clir.findAll();
 	}
+
+	@Override
+	public boolean editarCliente(Cliente clie) {
+		clir.save(clie);
+		return true;
+	}
+
+	@Override
+	public Cliente obtenerClientePorId(int cliente_idusuario) {
+		return clir.findOne(cliente_idusuario);
+	}
+
+	
+	
 
 }

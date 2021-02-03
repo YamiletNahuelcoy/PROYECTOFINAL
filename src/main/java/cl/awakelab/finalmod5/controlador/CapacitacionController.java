@@ -66,7 +66,7 @@ public class CapacitacionController {
 			logger.error("Fallo al crear la capacitación");
 		}
 
-		model.addAttribute("msgcrear", mensaje);
+		model.addAttribute("mensajes", mensaje);
 		return "msgcreacion";
 	}	
 

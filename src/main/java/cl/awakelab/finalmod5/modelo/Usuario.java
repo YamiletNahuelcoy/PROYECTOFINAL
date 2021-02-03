@@ -1,5 +1,7 @@
 package cl.awakelab.finalmod5.modelo;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,7 +13,7 @@ public class Usuario {
 	private String Userrun;
 	private String Usernombre;
 	private String Userapellidos;
-	private String UserFechaNacimiento;
+	private Date UserFechaNacimiento;
 	private String UserTipo;
 	private String Login;
 	private String Clave;
@@ -22,7 +24,7 @@ public class Usuario {
 	}
 
 
-	public Usuario(int idUsuario, String userrun, String usernombre, String userapellidos, String userFechaNacimiento,
+	public Usuario(int idUsuario, String userrun, String usernombre, String userapellidos, Date userFechaNacimiento,
 			String userTipo, String login, String clave) {
 		super();
 		this.idUsuario = idUsuario;
@@ -76,12 +78,12 @@ public class Usuario {
 	}
 
 
-	public String getUserFechaNacimiento() {
+	public Date getUserFechaNacimiento() {
 		return UserFechaNacimiento;
 	}
 
 
-	public void setUserFechaNacimiento(String userFechaNacimiento) {
+	public void setUserFechaNacimiento(Date userFechaNacimiento) {
 		UserFechaNacimiento = userFechaNacimiento;
 	}
 
@@ -124,4 +126,5 @@ public class Usuario {
 	}
 
 
+	
 }

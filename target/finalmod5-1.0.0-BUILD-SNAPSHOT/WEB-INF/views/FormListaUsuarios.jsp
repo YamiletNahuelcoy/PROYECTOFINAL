@@ -7,7 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Empresa Asesorías</title>
-<link rel="stylesheet" href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/Estilos.css'>
+	<link rel="stylesheet" href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/Estilos.css'>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
 
@@ -53,7 +53,18 @@
 				<td><c:out value="${lus.getUserapellidos()}" /></td>
 				<td><c:out value="${lus.getUserFechaNacimiento()}" /></td>
 				<td id="tipo"><c:out value="${lus.getUserTipo()}"  /></td>
-							
+				
+				<c:if test="${lus.getUserTipo()=='Cliente' }">
+				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarCliente/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>
+				</td>
+				
+				</c:if>	
+						<c:if test="${lus.getUserTipo()=='Administrativo' }">
+				<td><a href="EditarAdministrativo?idUsuario=<c:out value='${lus.getIdUsuario()}'/>">Editar</a></td>				
+				</c:if>	
+				<c:if test="${lus.getUserTipo()=='Profesional' }">
+				<td><a href="EditarProfesional?idUsuario=<c:out value='${lus.getIdUsuario()}'/>">Editar</a></td>				
+				</c:if>					
 				
 			</tr>
 			
