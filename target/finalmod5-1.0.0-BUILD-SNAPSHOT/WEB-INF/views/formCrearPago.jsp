@@ -8,9 +8,11 @@
 <title>Empresa de Asesorías</title>
 	<link rel="stylesheet" href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/Estilos.css'>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
 </head>
-<body>
+<body onload ="hola()">
 	<header id="seccion">
 		<h2>CREAR PAGO</h2>
 		<div class="content-menu">
@@ -23,7 +25,7 @@
 				<li><a href="<%=request.getContextPath()%>/">Inicio</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
-				<li><a href="<%=request.getContextPath()%>//listaPagos">Crear Pago</a></li>		
+				<li><a href="<%=request.getContextPath()%>/listaPagos">Lista Pagos</a></li>		
 				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Lista de Usuarios</a></li>
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>					
 				</ul>
@@ -31,7 +33,7 @@
 		</div>
 	</header>
 	<fieldset class="cel- agrupar-t agrupar-e">
-	<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesaPagos'>
+	<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesaPagos'  onsubmit="return validation()">
 			<table class="cel- tablas-t tablas-e" >
 			
 			<tr><td>ID Pago</td><td><input type="text" name="idpago" id="idpago" /></td></tr>

@@ -60,17 +60,13 @@
 				
 				</c:if>	
 						<c:if test="${lus.getUserTipo()=='Administrativo' }">
-<<<<<<< HEAD
+
 				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarAdministrativo/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>
 				</c:if>	
 				<c:if test="${lus.getUserTipo()=='Profesional' }">
 				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarProfesional/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>
-=======
-				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarAdministrativo/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>			
-				</c:if>	
-				<c:if test="${lus.getUserTipo()=='Profesional' }">
-				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarProfesional/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>				
->>>>>>> 8fe795d2850d90cb8b2b726f7cd8746c1b5c54de
+
+				
 				</c:if>					
 				
 			</tr>
