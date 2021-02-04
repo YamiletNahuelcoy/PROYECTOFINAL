@@ -60,10 +60,10 @@
 				
 				</c:if>	
 						<c:if test="${lus.getUserTipo()=='Administrativo' }">
-				<td><a href="EditarAdministrativo?idUsuario=<c:out value='${lus.getIdUsuario()}'/>">Editar</a></td>				
+				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarAdministrativo/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>			
 				</c:if>	
 				<c:if test="${lus.getUserTipo()=='Profesional' }">
-				<td><a href="EditarProfesional?idUsuario=<c:out value='${lus.getIdUsuario()}'/>">Editar</a></td>				
+				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarProfesional/<c:out value="${lus.getIdUsuario()}" />'>Editar</a>				
 				</c:if>					
 				
 			</tr>
