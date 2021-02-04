@@ -22,11 +22,6 @@ public class ServicioControlador {
 	@Autowired
 	CapacitacionServicio capser;
 	
-	@RequestMapping(value = "/clientelist", method = RequestMethod.GET, headers = "Accept=application/json")
-	public List<Cliente> getClientes() {
-	List<Cliente> listaclientes =  cli.obtenerCliente();
-	return listaclientes;
-	}
 	
 	@RequestMapping(value = "/caplist", method = RequestMethod.POST, headers = "Accept=application/json")
 	public void addCapacitacion(@RequestBody Capacitacion Capacitacion) {
