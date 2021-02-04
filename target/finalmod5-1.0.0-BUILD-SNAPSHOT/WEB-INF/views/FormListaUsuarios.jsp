@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Empresa Asesorías</title>
+<title>Empresa Asesorï¿½as</title>
 	<link rel="stylesheet" href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/Estilos.css'>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
@@ -27,7 +27,7 @@
 				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
 				<li><a href="<%=request.getContextPath()%>/listaClientes">Lista de Clientes</a></li>
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>	
-				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
+				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesiï¿½n</a></li>				
 				</ul>
 			</nav>
 		</div>

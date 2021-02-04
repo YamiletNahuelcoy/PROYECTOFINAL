@@ -1,6 +1,5 @@
 package cl.awakelab.finalmod5.controlador;
 
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,17 +23,7 @@ public class ClienteController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(ClienteController.class);
 	
-	@RequestMapping(value="/listaClientes", method = RequestMethod.GET)
-	public String ListarClientes(Model model) {
 		
-		logger.info("Ingreso al listado de clientes");
-		List<Cliente> listaclientes = clis.obtenerCliente();
-		model.addAttribute("lcli", listaclientes);
-		logger.info("Ya mostré los clientes");
-		
-		return "FormListarclientes";
-	}
-	
 	@RequestMapping(value="/editarCliente/{iduser}", method = RequestMethod.GET)
 	public String editarCliente(Model model, @PathVariable int iduser) {
 		Cliente clie = clis.obtenerClientePorId(iduser);

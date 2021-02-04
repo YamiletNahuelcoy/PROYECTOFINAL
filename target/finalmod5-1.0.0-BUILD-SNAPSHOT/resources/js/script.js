@@ -6,45 +6,45 @@ $.validator.addMethod("valueNotEquals", function(value, element, arg) {
 
 	$('#commentForm').validate({
 		rules: {
-			run: {
+			txtrutcliente: {
 				required: true,
 				maxlength: 9
 			},
-			nombre: "required",
-			apellido: "required",
-			telefono: {
+			txtnomcliente: "required",
+			txtapecliente: "required",
+			txttelcliente: {
 				required: true,
 				maxlength: 9
 			},
-			afp: "required",
+			txtafpcliente: "required",
 			sissalud: {
 				valueNotEquals: "default"
 			},
-			direc: "required",
-			comuna: "required",
-			edad: {
+			txtdirecccliente: "required",
+			txtcomcliente: "required",
+			txtedadcliente: {
 				required: true,
 				maxlength: 2
 			},
 		},
 		messages: {
-			run: {
+			txtrutcliente: {
 				required: "Este es un campo obligatorio.",
 				maxlength: "Excede numero máximo de caracteres."
 			},
-			nombre: "Este es un campo obligatorio.",
-			apellido: "Este es un campo obligatorio.",
-			telefono: {
+			txtnomcliente: "Este es un campo obligatorio.",
+			txtapecliente: "Este es un campo obligatorio.",
+			txttelcliente: {
 				required: "Este es un campo obligatorio.",
 				maxlength: "Excede numero máximo de caracteres."
 			},
-			afp: "Este es un campo obligatorio.",
+			txtafpcliente: "Este es un campo obligatorio.",
 			sissalud: {
 				valueNotEquals: "Seleccione una opción"
 			},
-			direc: "Este es un campo obligatorio.",
-			comuna: "Este es un campo obligatorio.",
-			edad: {
+			txtdirecccliente: "Este es un campo obligatorio.",
+			txtcomcliente: "Este es un campo obligatorio.",
+			txtedadcliente: {
 				required: "Este es un campo obligatorio.",
 				maxlength: "Excede numero máximo de caracteres."
 			},
