@@ -35,7 +35,7 @@
 		<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesaeditar'>
 			<table class="tablausr-t tablausr-e">
 					<tr><td>Id de Usuario</td><td><input type="number" name="txtiduseradmin" id="txtiduseradmin" value='<c:out value="${ad.getusuario_idusuario()}" />' readonly="readonly" /></td></tr>	
-					<tr><td>Id de Administrativo</td><td><input type="number" name="txtidadmin" id="txtidadmin" value='<c:out value="${ad.getidadministrativo()}" />' readonly="readonly" /></td></tr>				
+					<tr><td>Id de Administrativo</td><td><input type="number" name="txtidadmin" id="txtidadmin" value='<c:out value="${ad.getidadministrativo()}" />' /></td></tr>				
 					<tr><td >RUT</td><td><input type="text" name="txtrutadmin" id="txtrutadmin" value='<c:out value="${ad.getAdminRun()}" />'/></td></tr>
 					<tr><td>Nombre</td><td><input type="text" name="txtnomadmin" id="txtnomadmin" value='<c:out value="${ad.getAdmiNombres()}" />' /></td></tr>
 					<tr><td>Apellidos</td><td><input type="text" name="txtapeadmin" id="txtapeadmin" value='<c:out value="${ad.getAdminApellidos()}" />' /></td></tr>

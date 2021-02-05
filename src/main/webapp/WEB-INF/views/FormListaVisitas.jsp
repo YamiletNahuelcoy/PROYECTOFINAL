@@ -9,7 +9,7 @@
 <title>Empresa Asesorías</title>
 <link rel="stylesheet" href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/Estilos.css'>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
+	<script type="text/javascript" src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
 
 </head>
 <body>
@@ -53,7 +53,7 @@
 				<td><c:out value="${lvis.getVislugar()}" /></td>
 				<td><c:out value="${lvis.getViscomentarios()}" /></td>
 				<td><c:out value="${lvis.getCliente_rutcliente()}" /></td>
-				<td><a href="<%=request.getContextPath()%>/Checklist">Responder Checklist</a>
+				<td><a onclick="chequeo()" href="<%=request.getContextPath()%>/Checklist">Responder Checklist </a>
 				</td>	
                
 			</tr>

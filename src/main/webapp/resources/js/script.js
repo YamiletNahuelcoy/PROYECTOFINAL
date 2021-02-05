@@ -1,3 +1,4 @@
+charset="utf-8"
 $(document).ready(function() {
 	//VALIDACIÓN FORMULARIO DE CLIENTES
 $.validator.addMethod("valueNotEquals", function(value, element, arg) {
@@ -402,7 +403,10 @@ $(document).ready(function() {
 
 
 //SEGÚN LA SELECCIÓN MUESTRA EL LISTADO listarchecklist.html
-function chequeo() {
+
+
+function Listachequeo() {
+
 	c1 = document.getElementById("chek1");
 	c2 = document.getElementById("chek2");
 	c3 = document.getElementById("chek3");
@@ -640,21 +644,21 @@ document.write(f.getDate() + "/" + (f.getMonth()+1) + "/" + f.getFullYear());
 
 function validacion() {
 
-var añoPago = document.getElementById("añopago");
+var anoPago = document.getElementById("anopago");
 var rutCli = document.getElementById("rutcli");
 var montoPago = document.getElementById("montopago");
 var mesPago = document.getElementById("mespago");
 
-var añopagoNum = parseInt(añoPago.value);   
+var anopagoNum = parseInt(anoPago.value);   
 var montopagoNum = parseInt(montoPago.value);  
 
 
-if (añoPago.value == "" || añoPago.value == null || rutCli.value =="" || rutCli.value ==null ||
+if (anoPago.value == "" || anoPago.value == null || rutCli.value =="" || rutCli.value ==null ||
         montoPago.value == "" || montoPago.value == null || mesPago.value == "" ||  mesPago.value == null){
             alert("campos vacios");
             return false;
         }
-else if (2010 > añopagoNum || añopagoNum > 2050){
+else if (2010 > anopagoNum || anopagoNum > 2050){
             alert( "[ERROR]ingrese un año valido entre 2010 y 2050");
             return false;
          }

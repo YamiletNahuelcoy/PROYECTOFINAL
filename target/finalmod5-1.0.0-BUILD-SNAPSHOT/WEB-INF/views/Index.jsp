@@ -30,6 +30,7 @@
 				<!-- EDITAR LUEGO.... AGREGUE LA LINEA DE ABAJO SOLO PARA VER LA LISTA DE VISITAS -->  
 				<li><a href="<%=request.getContextPath()%>/listaVisitas">Listado de Visitas</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Lista de Usuarios</a></li>
+				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Usuario </a></li>
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
 							
 				</ul>

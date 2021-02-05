@@ -79,7 +79,7 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <input type="button" class="boton" value="Chequeo" name="cheq" id="chek8" onclick="chequeo()">
+                        <input onclick="Listachequeo()" type="button" class="boton" value="Chequeo" name="cheq" id="chek8" >
 
                         <div id="chek9" class="lista"></div>
                     </td>

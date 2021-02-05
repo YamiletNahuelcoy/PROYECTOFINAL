@@ -53,8 +53,9 @@
 				<td><c:out value="${lvis.getVislugar()}" /></td>
 				<td><c:out value="${lvis.getViscomentarios()}" /></td>
 				<td><c:out value="${lvis.getCliente_rutcliente()}" /></td>
-							
-				
+				<td><a href="<%=request.getContextPath()%>/Checklist">Responder Checklist</a>
+				</td>	
+               
 			</tr>
 			
 			</c:forEach>	
