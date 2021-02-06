@@ -40,7 +40,7 @@ PagoServicio ps;
 	
 	@RequestMapping(value="/CrearPago", method = RequestMethod.GET)
 	public String crearPagos(Model model) {
-		logger.info("Ingreso a la creación de capacitaciones");
+		logger.info("Ingreso a la creación de pagos");
 		return "formCrearPago";
 	}
 	
@@ -50,7 +50,7 @@ PagoServicio ps;
 			@RequestParam ("txtfecha") Date pagoFecha,
 			@RequestParam ("txtmonto") int pagoMonto, 
 			@RequestParam ("txtmes") String pagoMes,
-			@RequestParam ("txtaño") int pagoAño,
+			@RequestParam ("txtanio") int pagoAño,
 			@RequestParam ("rutcliente") String cliente_rutcliente) {
 		
 		logger.info("Proceso crear pago");

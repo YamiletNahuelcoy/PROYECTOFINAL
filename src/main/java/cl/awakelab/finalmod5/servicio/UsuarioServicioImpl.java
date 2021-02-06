@@ -26,5 +26,11 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 		return true;
 
 	}
+	
+	@Override
+	public Usuario obtenerUsuarioPorId(int idusuario) {
+		return ur.findOne(idusuario);
+	}
 
+	
 }

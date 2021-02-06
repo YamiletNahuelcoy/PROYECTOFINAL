@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.awakelab.finalmod5.modelo.Profesional;
+import cl.awakelab.finalmod5.modelo.Usuario;
 import cl.awakelab.finalmod5.servicio.ProfesionalServicio;
+import cl.awakelab.finalmod5.servicio.UsuarioServicio;
 
 
 
@@ -22,14 +24,19 @@ public class ProfesionalController {
 	
 	@Autowired
 	ProfesionalServicio profes;
+	@Autowired
+	UsuarioServicio usercli;
+	
 	private static final Logger logger = LoggerFactory.getLogger(ProfesionalController.class);
 	
 	
 	@RequestMapping(value="/editarProfesional/{iduser}", method = RequestMethod.GET)
 	public String editarProfesional(Model model, @PathVariable int iduser) {
-		Profesional profe = profes.obtenerProfesionalPorId(iduser);
+		Usuario user = usercli.obtenerUsuarioPorId(iduser);
+		Profesional prof= profes.obtenerProfesionalPorId(iduser);
 		logger.info("Entro a la edición del profesional");
-		model.addAttribute("pr", profe);
+		model.addAttribute("us", user);
+		model.addAttribute("pr", prof);
 		return "FormEditarProfesional";
 	}
 	

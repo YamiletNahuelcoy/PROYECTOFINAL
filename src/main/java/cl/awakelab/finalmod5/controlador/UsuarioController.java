@@ -12,7 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import cl.awakelab.finalmod5.modelo.Administrativo;
+import cl.awakelab.finalmod5.modelo.Cliente;
+import cl.awakelab.finalmod5.modelo.Profesional;
 import cl.awakelab.finalmod5.modelo.Usuario;
+import cl.awakelab.finalmod5.servicio.AdministrativoServicio;
+import cl.awakelab.finalmod5.servicio.ClienteServicio;
+import cl.awakelab.finalmod5.servicio.ProfesionalServicio;
 import cl.awakelab.finalmod5.servicio.UsuarioServicio;
 
 //controlador usuario
@@ -21,6 +27,13 @@ public class UsuarioController {
 
 	@Autowired
 	UsuarioServicio uss;
+	@Autowired
+	ClienteServicio cs;
+	@Autowired
+	ProfesionalServicio ps;
+	@Autowired
+	AdministrativoServicio as;
+	
 	private static final Logger logger = LoggerFactory.getLogger(UsuarioController.class);
 	
 	@RequestMapping(value="/listaUsuarios", method = RequestMethod.GET)
@@ -28,7 +41,13 @@ public class UsuarioController {
 		
 		logger.info("Ingreso al listado de usuarios");
 		List<Usuario> listausuarios = uss.obtenerUsuarios();
+		List<Cliente> listaclientes = cs.obtenerCliente();
+		List<Administrativo> listaadmin = as.obtenerAdministrativo();
+		List<Profesional> listaprof =ps.obtenerProfesional();
 		model.addAttribute("listauser", listausuarios);
+		model.addAttribute("listacli", listaclientes);
+		model.addAttribute("listaadm", listaadmin);
+		model.addAttribute("listaprof", listaprof);
 		logger.info("Ya mostré los usuarios");
 		
 		return "FormListaUsuarios";
@@ -57,7 +76,7 @@ public class UsuarioController {
 		String mensaje = "";
 		
 		if (result) {
-			mensaje = "El Usuario fue creada sin inconvenientes";
+			mensaje = "El Usuario fue creado sin inconvenientes";
 			logger.info("Se creó el Usuario");
 		}
 		else {

@@ -19,30 +19,30 @@
 				class="icon-menu" for="check"></label>
 			<nav class="menu">
 				<ul>
-					<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
-
-					<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear
-							Capacitaciones</a></li>
-					<li><a
-						href="<%=request.getContextPath()%>/ListarCapacitaciones">Listar
-							Capacitaciones</a></li>
-					<li><a href="<%=request.getContextPath()%>/ListadoDeUsuarios">Listado
-							de Usuarios</a></li>
-					<li><a href="<%=request.getContextPath()%>/CerrarSesion">Cerrar
-							Sesión</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>
+				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
+				<li><a href="<%=request.getContextPath()%>/listaClientes">Lista de Clientes</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaPagos">Lista de Pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear Pago</a></li>						
+				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
+				<!-- EDITAR LUEGO.... AGREGUE LA LINEA DE ABAJO SOLO PARA VER LA LISTA DE VISITAS -->  
+				<li><a href="<%=request.getContextPath()%>/listaVisitas">Listado de Visitas</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Lista de Usuarios</a></li>
+				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Usuario </a></li>
+				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
+							
 				</ul>
 			</nav>
 		</div>
 	</header>
-
 	<fieldset class="cel- agrupar-t agrupar-e">
-		<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/ProfesionalEditado'>
+		<form method="post" action='<c:out value="${pageContext.request.contextPath}"/>/ProfesionalEditado'>
 			<table class="tablausr-t tablausr-e">	
-					<tr><td>Id de Usuario</td><td><input type="number" name="txtiduser" id="txtiduser" value='<c:out value="${pr.getUsuario_idusuario()}" />' readonly="readonly" /></td></tr>
-					<tr><td>Id del Profesional</td><td><input type="number" name="txtidprof" id="txtidprof" value='<c:out value="${pr.getIdProfesional()}" />' readonly="readonly" /></td></tr>				
-					<tr><td >RUT</td><td><input type="text" name="txtrutprof" id="txtrutprof" value='<c:out value="${pr.getProfRun()}" />' /></td></tr>
-					<tr><td>Nombre</td><td><input type="text" name="txtnomprof" id="txtnomprof" value='<c:out value="${pr.getProfNombres()}" />' /></td></tr>
-					<tr><td>Apellidos</td><td><input type="text" name="txtapeprof" id="txtapeprof" value='<c:out value="${pr.getProfApellidos()}" />' /></td></tr>
+					<tr><td>Id de Usuario</td><td><input type="number" name="txtiduser" id="txtiduser" value='<c:out value="${us.getIdUsuario()}" />' readonly="readonly"  /></td></tr>
+					<tr><td>Id del Profesional</td><td><input type="number" name="txtidprof" id="txtidprof" value='<c:out value="${pr.getProfTelefono()}" />'/></td></tr>				
+					<tr><td >RUT</td><td><input type="text" name="txtrutprof" id="txtrutprof" value='<c:out value="${us.getUserrun()}" />' /></td></tr>
+					<tr><td>Nombre</td><td><input type="text" name="txtnomprof" id="txtnomprof" value='<c:out value="${us.getUsernombre()}" />' /></td></tr>
+					<tr><td>Apellidos</td><td><input type="text" name="txtapeprof" id="txtapeprof" value='<c:out value="${us.getUserapellidos()}" />' /></td></tr>
 					<tr><td>Teléfono</td><td><input type="text" name="txttelprof" id="txttelprof" value='<c:out value="${pr.getProfTelefono()}" />' /></td></tr>
 					<tr><td>Titulo</td><td><input type="text" name="txttitulo" id="txttitulo" value='<c:out value="${pr.getProfTitulo()}" />'/></td></tr>
 					<tr><td>Proyecto</td><td><input type="text" name="txtproyecto" id="txtproyecto" value='<c:out value="${pr.getProfProyecto()}" />'/></td></tr>

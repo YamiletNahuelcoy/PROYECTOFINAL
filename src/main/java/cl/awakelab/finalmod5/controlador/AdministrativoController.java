@@ -11,21 +11,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.awakelab.finalmod5.modelo.Administrativo;
+import cl.awakelab.finalmod5.modelo.Usuario;
 import cl.awakelab.finalmod5.servicio.AdministrativoServicio;
+import cl.awakelab.finalmod5.servicio.UsuarioServicio;
 
 @Controller
 public class AdministrativoController {
 
 	@Autowired
 	AdministrativoServicio admser;
+	@Autowired
+	UsuarioServicio usercli;
 	
 	private static final Logger logger = LoggerFactory.getLogger(AdministrativoController.class);
 	
 	
 	@RequestMapping(value="/editarAdministrativo/{iduser}", method = RequestMethod.GET)
 	public String editarAdministrativo(Model model, @PathVariable int iduser) {
+		Usuario user = usercli.obtenerUsuarioPorId(iduser);
 		Administrativo admin = admser.obtenerAdminPorId(iduser);
 		logger.info("Entro a la edición del administrativo");
+		model.addAttribute("us", user);
 		model.addAttribute("ad", admin);
 		return "FormEditarAdministrativo";
 	}

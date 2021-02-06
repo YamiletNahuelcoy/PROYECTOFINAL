@@ -1,6 +1,5 @@
 package cl.awakelab.finalmod5.controlador;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.awakelab.finalmod5.modelo.Cliente;
+import cl.awakelab.finalmod5.modelo.Usuario;
 import cl.awakelab.finalmod5.servicio.ClienteServicio;
+import cl.awakelab.finalmod5.servicio.UsuarioServicio;
 
 @Controller
 public class ClienteController {
@@ -20,15 +21,19 @@ public class ClienteController {
 	
 	@Autowired
 	ClienteServicio clis;
+	@Autowired
+	UsuarioServicio usercli;
 	
 	private static final Logger logger = LoggerFactory.getLogger(ClienteController.class);
 	
 		
 	@RequestMapping(value="/editarCliente/{iduser}", method = RequestMethod.GET)
 	public String editarCliente(Model model, @PathVariable int iduser) {
-		Cliente clie = clis.obtenerClientePorId(iduser);
+		Usuario user = usercli.obtenerUsuarioPorId(iduser);
+		Cliente cli = clis.obtenerClientePorId(iduser);
 		logger.info("Entro a la edición del cliente");
-		model.addAttribute("us", clie);
+		model.addAttribute("us", user);
+		model.addAttribute("cl", cli);
 		return "FormEditarCliente";
 	}
 
@@ -45,7 +50,6 @@ public class ClienteController {
 		@RequestParam ("txtcomcliente") String clicomuna,
 		@RequestParam ("txtedadcliente") int CliEdad
 		
-
 		) {
 		
 		logger.info("Proceso la edición de clientes");
@@ -65,6 +69,8 @@ public class ClienteController {
 		model.addAttribute("mensajes", mensaje);
 		return "msgcreacion";
 	}
+	
+	
 	
 }
 

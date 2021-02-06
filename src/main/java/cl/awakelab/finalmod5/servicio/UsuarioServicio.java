@@ -11,5 +11,8 @@ public interface UsuarioServicio {
 	public List<Usuario> obtenerUsuarios();
 	
 	public boolean creaUsuario(Usuario us);
+	
+	public Usuario obtenerUsuarioPorId(int idusuario);
+	
 
 }

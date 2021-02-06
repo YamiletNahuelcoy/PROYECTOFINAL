@@ -1,6 +1,8 @@
 package cl.awakelab.finalmod5.servicio;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +26,12 @@ public class ClienteServicioImpl implements ClienteServicio {
 	@Override
 	public Cliente obtenerClientePorId(int cliente_idusuario) {
 		return clir.findOne(cliente_idusuario);
+	}
+
+	@Override
+	public List<Cliente> obtenerCliente() {
+		return (List<Cliente>) clir.findAll();
+
 	}
 
 	

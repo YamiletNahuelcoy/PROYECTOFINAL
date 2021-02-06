@@ -5,6 +5,14 @@ body {
 	background-color: #008d7a;
 }
 
+caption{
+	color: rgb(0, 165, 165);
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: underline;
+	text-align: center;
+}
+
 th {
 	color: rgb(0, 165, 165);
 	text-shadow: black 0.1em 0.1em 0.2em

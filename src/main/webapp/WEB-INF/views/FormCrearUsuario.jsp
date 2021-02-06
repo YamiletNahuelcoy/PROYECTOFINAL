@@ -44,7 +44,7 @@
 					<input type="radio" name="txttipouser" value="Administrativo" id="Administrativo" />Administrativo	</td></tr>
 			<tr><td>Login</td><td><input type="text" name="txtlogin" id="txtlogin" /></td></tr>
 			<tr><td>Clave</td><td><input type='password' name='password' id="password" /></td></tr>
-			<tr><td colspan="6"><input type="submit" name="btnguardar" id="btnguardar" value="Crear Usuario" /><br/></td></tr>
+			<tr><td colspan="2"><input type="submit" name="btnguardar" id="btnguardar" value="Crear Usuario" /><br/></td></tr>
 			
 			</table>
 		</form>
