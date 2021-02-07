@@ -31,15 +31,16 @@ public class ChequeoController {
 		model.addAttribute("verchecklist", checklist);
 		logger.info("Ya mostré el checklist");
 		
-		return "ResponderChecklist";
+		return "FormResponderChecklist";
 	}
 	
-	/*
-	 * @RequestMapping(value="/responderChequeo", method = RequestMethod.GET) public
-	 * String responderChequeo(Model model) {
-	 * logger.info("Ingresó a responder cheqcklist"); return "ResponderChecklist"; }
-	 */
+	@RequestMapping(value="/insertarChequeo", method = RequestMethod.GET)
+	public String crearPagos(Model model) {
+		logger.info("Ingreso a la creación de pagos");
+		return "formCrearPago";
+	}
 	
+		
 	@RequestMapping(value="/procesachecklist", method = RequestMethod.POST)
 	public String procesarchequeo(Model model, 
 			@RequestParam ("txtid") int idchequeo,

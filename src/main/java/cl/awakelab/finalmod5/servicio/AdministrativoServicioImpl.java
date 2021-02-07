@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import cl.awakelab.finalmod5.modelo.Administrativo;
 import cl.awakelab.finalmod5.modelo.AdministrativoRepositorio;
-import cl.awakelab.finalmod5.modelo.Profesional;
 
 @Service
 public class AdministrativoServicioImpl implements AdministrativoServicio{

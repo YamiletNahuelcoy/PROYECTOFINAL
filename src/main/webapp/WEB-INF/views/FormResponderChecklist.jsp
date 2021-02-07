@@ -33,53 +33,24 @@
 		</div>
 	</header>
 	<fieldset class="cel- agrupar-t agrupar-e">
-		<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesachecklist'>
+		<form id="formchek" name="formchek" method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesachecklist'>
 		 	<table class="tablaadm-t tablaadm-e">
                 <tr class="negrita">
                     <td>Id Chequeo</td>
                     <td>Nombre</td>
                     <td>Seleccione chequeo</td>
                 </tr>
-				
-                
-                <tr>
-                    <td>1</td>
-                    <td>Servicios higiénicos</td>
-                    <td><input type="checkbox" name="checkbox" value="Servicios higiénicos" id="chek1" /></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Sala de vestir</td>
-                    <td><input type="checkbox" name="checkbox" value="Sala de vestir" id="chek2" /></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Comedores</td>
-                    <td><input type="checkbox" name="checkbox" value="Comedores" id="chek3" /></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Escaleras</td>
-                    <td><input type="checkbox" name="checkbox" value="Escaleras" id="chek4" /></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Señalización</td>
-                    <td><input type="checkbox" name="checkbox" value="Señalización" id="chek5" /></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Instalaciones eléctricas</td>
-                    <td><input type="checkbox" name="checkbox" value="Instalaciones eléctricas" id="chek6" /></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Extintores</td>
-                    <td><input type="checkbox" name="checkbox" value="Extintores" id="chek7" /></td>
-                </tr>
+				<c:forEach items="${verchecklist}" var="ch">
+				<tr>
+					<td><c:out value="${ch.getIdchequeo()}" /></td>
+					<td id="cheqnombre"><c:out value="${ch.getCheqnombre()}" /></td>
+					 <td><input type="checkbox" name="checkbox" value="chek" id="chek" /></td>																		
+				</tr>
+			</c:forEach>
+
                 <tr>
                     <td colspan="3">
-                        <input onclick="Listachequeo()" type="button" class="boton" value="Chequeo" name="cheq" id="chek8" >
+                        <input onclick="Listachequeo()" type="button" class="boton" value="Chequeo" name="cheq" id="Chequeo" >
 
                         <div id="chek9" class="lista"></div>
                     </td>

@@ -34,11 +34,11 @@
 	<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesaPagos'  >
 			<table class="cel- tablas-t tablas-e" >
 			
-			<tr><td>ID Pago</td><td><input type="number" name="idpago" id="idpago" /></td></tr>
-			<tr><td>Fecha de Pago</td><td><input type="date" pattern="dd/mm/yyyy" name="txtfecha" id="txtfecha"/></td></tr>
-			<tr><td>Monto de Pago</td><td><input type="number" name="txtmonto" id="txtmonto" /></td></tr>
-			<tr><td>Mes de Pago</td><td><select name="txtmes" id="txtmes" >
-						<option value= "Seleccione"  > Seleccione
+			<tr><td>ID Pago</td><td><input type="number" name="idpago" id="idpago" required="required"/></td></tr>
+			<tr><td>Fecha de Pago</td><td><input type="date" pattern="dd/mm/yyyy" name="txtfecha" id="txtfecha" required="required"/></td></tr>
+			<tr><td>Monto de Pago</td><td><input type="number" name="txtmonto" id="txtmonto" required="required"/></td></tr>
+			<tr><td>Mes de Pago</td><td><select required aria-required="true" name="txtmes" id="txtmes" >
+						<option value= ""  > Seleccione
 						<option value="Enero">Enero
 						<option value="Febrero">Febrero
 						<option value="Marzo">Marzo
@@ -53,9 +53,10 @@
 						<option value="Diciembre">Diciembre
 						</select></td></tr>		
 						
-				<tr><td>Año de Pago</td><td><select name="txtanio"></select></td></tr> 	    					
+				<tr><td>Año de Pago</td><td><select required aria-required="true" name="txtanio"  id="txtanio">
+				<option value="" >Seleccione </select></td></tr> 	    					
 			           
-			<tr><td>Rut del cliente</td><td><input type="text" name="rutcliente" id="rutcliente"  /></td></tr>
+			<tr><td>Rut del cliente</td><td><input type="text" name="rutcliente" id="rutcliente" required="required" /></td></tr>
 						
 			<tr><td colspan="6"><input onclick="ingresaDatosPago()" type="submit" name="btnguardar" id="btnguardar" value="Guardar Pago"  /><br/></td></tr>
 			

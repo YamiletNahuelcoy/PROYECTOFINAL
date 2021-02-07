@@ -1,7 +1,7 @@
 charset="utf-8"
 $(document).ready(function() {
 	//VALIDACIÓN FORMULARIO DE CLIENTES
-$.validator.addMethod("valueNotEquals", function(value, element, arg) {
+$.validator.addMethod("valueNotEquals", function(value, arg) {
 		return arg !== value;
 	}, "Value must not equal arg.")
 
@@ -54,21 +54,6 @@ $.validator.addMethod("valueNotEquals", function(value, element, arg) {
 });
 
 
-//SEGÚN TIPO DE USUARIO
-function cargartipo(){
-	var tipo = document.getElementById("tipo");
-	var a = "";
-	
-	if(a.equals('Cliente')){
-     response.sendRedirect(request.getContextPath() + "/Editarcliente");
-	}else if(a.equals('Profesional')){
-		response.sendRedirect(request.getContextPath() + "/EditarProfesional");
-	}else if(a.equals('Administrativo')){
-		response.sendRedirect(request.getContextPath() + "/EditarAdministrativo");
-	}
-}
-
-
 //funciones para CREAR PAGO
 //RANGO PARA SELECCIÓN DE AÑOS
 function RangoMesAnio(desde, hasta) {
@@ -89,36 +74,57 @@ function fechaActual() {
 
 //VALIDACIÓN INGRESO DE DATOS
 function ingresaDatosPago() {
-	if (txtmonto.value >= 0 && txtmonto.value <= 999999999 && txtmonto.value != "") {
-		document.getElementById('txtmonto').className = 'validado';
+	
+	if (idpago.value != ""){
+		document.getElementById('idpago').className = 'validado';		
 		validacion1 = 1;
+		
 	} else {
-		document.getElementById('txtmonto').className = 'error';
-	}
-	if (txtmes.value >= 0 && txtmes.value != "") {
-		document.getElementById('txtmes').className = 'validado';
+		document.getElementById('idpago').className = 'error';
+		
+	}		
+		if (txtfecha.value != ""){
+		document.getElementById('txtfecha').className = 'validado';		
 		validacion2 = 1;
 	} else {
-		document.getElementById('txtmes').className = 'error';
+		document.getElementById('txtfecha').className = 'error';
+				
 	}
-	if (txtanio.value >= 0 && txtanio.value <= 2050 && txtanio.value != "") {
-		document.getElementById('txtanio').className = 'validado';
+		if (txtmonto.value >= 0 && txtmonto.value <= 999999999 && txtmonto.value != "") {
+		document.getElementById('txtmonto').className = 'validado';		
 		validacion3 = 1;
 	} else {
+		document.getElementById('txtmonto').className = 'error';
+		
+	}
+	if (txtmes.value != "") {
+		document.getElementById('txtmes').className = 'validado';
+		validacion4 = 1;
+	} else {
+		document.getElementById('txtmes').className = 'error';
+		
+	}
+	if (txtanio.value != "") {
+		document.getElementById('txtanio').className = 'validado';
+		validacion5 = 1;
+	} else {
 		document.getElementById('txtanio').className = 'error';
-
+	
 	}
 	if (rutcliente.value >= 0 && rutcliente.value <= 999999999 && rutcliente.value != "") {
 		document.getElementById('rutcliente').className = 'validado';
-		validacion4 = 1;
+		validacion6 = 1;
 	} else {
 		document.getElementById('rutcliente').className = 'error';
+		
 	}
-	if (validacion1==1 && validacion2 == 1 && validacion3 == 1 && validacion4 == 1) {
+	if (validacion1==1 && validacion2 == 1 && validacion3 == 1 && validacion4 == 1 && validacion5 == 1 && validacion6 == 1) {
 		alert("Los datos se han ingresado correctamente");
 	}
-};
-
+	
+	};
+	
+	
 //FORMULARIO DE INGRESO DATOS DEL CLIENTE
 $(document).ready(function() {
 
@@ -276,8 +282,6 @@ function chequeo() {
 }
 
 
-
-
 //aplica datatables
 $(document).ready(function() {
 	$('#tableid').DataTable({
@@ -286,15 +290,13 @@ $(document).ready(function() {
 });
 
 
-//Mes y Año del crear pago
+//Año del crear pago
  $(document).ready(function(){
- 
-            // cargamos los años
+             // cargamos los años
             for(var i=2010;i<2051;i++)
             {
                 $("select[name=txtanio]").append(new Option(i,i));
             }
- 
             
-        });
+ });
 

@@ -16,7 +16,7 @@
 		<div class="content-menu">
 			<input type="checkbox" id="check"> <label class="icon-menu"
 				for="check"><img src="iconos/icono-menu.png" alt=""
-				class="icon-menu" for="check"></label>
+				class="icon-menu" ></label>
 			<nav class="menu">
 				<ul>
 				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>

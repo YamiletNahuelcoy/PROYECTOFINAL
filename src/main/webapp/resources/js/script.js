@@ -1,4 +1,5 @@
 charset="utf-8"
+
 $(document).ready(function() {
 	//VALIDACIÓN FORMULARIO DE CLIENTES
 $.validator.addMethod("valueNotEquals", function(value, arg) {
@@ -224,45 +225,14 @@ function validaRut(campo) {
 
 function Listachequeo() {
 
-	c1 = document.getElementById("chek1");
-	c2 = document.getElementById("chek2");
-	c3 = document.getElementById("chek3");
-	c4 = document.getElementById("chek4");
-	c5 = document.getElementById("chek5");
-	c6 = document.getElementById("chek6");
-	c7 = document.getElementById("chek7");
-	var text1 = "";
-	var text2 = "";
-	var text3 = "";
-	var text4 = "";
-	var text5 = "";
-	var text6 = "";
-	var text7 = "";
-	if (c1.checked || c2.checked || c3.checked || c4.checked || c5.checked || c6.checked || c7.checked) {
-
-		if (c1.checked) {
-			var text1 = "<li>Servicios higiénicos</li>";
-		}
-		if (c2.checked) {
-			var text2 = "<li>Sala de vestir</li>";
-		}
-		if (c3.checked) {
-			var text3 = "<li>Comedores</li>";
-		}
-		if (c4.checked) {
-			var text4 = "<li>Señalización</li>";
-		}
-		if (c5.checked) {
-			var text5 = "<li>Señalización</li>";
-		}
-		if (c6.checked) {
-			var text6 = "<li>Instalaciones eléctricas</li>";
-		}
-		if (c7.checked) {
-			var text7 = "<li>Extintores</li>";
-		}
-		document.getElementById('chek9').innerHTML = 'Chequeos Seleccionados<ul>' + text1 + text2 + text3 +
-			text4 + text5 + text6 + text7;
+	c1 = document.getElementById("chek");
+	var text = "";
+	
+	if (c1.checked == true) {
+		var text = "<li>document.getElementById('cheqnombre') </li>";
+		
+		document.getElementById('chek9').innerHTML = 'Chequeos Seleccionados<ul>' + text;
+		
 
 	} else
 		alert("Por favor seleccionar al menos un chequeo")
@@ -271,10 +241,10 @@ function Listachequeo() {
 
 //VALIDAR listadovisitas.html
 function chequeo() {
-	var mensaje = confirm('¿Desea validar y modificar los chequeos de esta visita?');
-	if (mensaje) {
-
-		location.href = "responderchecklist.html";
+	var mensaje = confirm("¿Desea validar y modificar los chequeos de esta visita?");
+	if (mensaje ) {
+	
+	 location.href="Checklist";
 	}
 	else {
 		alert("¡Haz denegado el mensaje!");
