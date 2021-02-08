@@ -23,12 +23,14 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href="<%=request.getContextPath()%>/">Inicio</a></li>
-				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>
-				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
-				<li><a href="<%=request.getContextPath()%>/listaClientes">Lista de Clientes</a></li>
-				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>	
-				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
+				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
+				<li><a href='<%=request.getContextPath()%>/editarAdministrativo'>Editar Administrativo</a></li>
+				<li><a href="<%=request.getContextPath()%>/editarProfesional">Editar Profesional</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Listado de Usuarios</a></li>
+				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Nuevo Usuario</a></li>
+				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>			
 				</ul>
 			</nav>
 		</div>

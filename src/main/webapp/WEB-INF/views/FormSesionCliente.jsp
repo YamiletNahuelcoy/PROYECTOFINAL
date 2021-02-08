@@ -14,8 +14,9 @@
 <body>
 
 	<header id="seccion">
-		<h2>Bienvenido Fernando González 	
-		</h2>
+		<h1>Bienvenido Fernando González 	
+		</h1>
+		<h2>PERFIL CLIENTE</h2>
 		<div class="content-menu">
 			<input type="checkbox" id="check"> <label class="icon-menu"
 				for="check"><img src="resources/iconos/icono-menu.png" alt=""
@@ -26,7 +27,6 @@
 	</header>
 	<fieldset class="cel- agrupar-t agrupar-e">
 		<ol>
-				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
 				<li><a href='<%=request.getContextPath()%>/listaCapacitaciones'>Listado de Capacitaciones</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>

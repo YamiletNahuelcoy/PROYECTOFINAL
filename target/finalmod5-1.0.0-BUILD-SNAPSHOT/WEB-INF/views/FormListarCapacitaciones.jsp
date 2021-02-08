@@ -20,18 +20,10 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>
+				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
-				<li><a href="<%=request.getContextPath()%>/listaClientes">Lista de Clientes</a></li>
-				<li><a href="<%=request.getContextPath()%>/listaPagos">Lista de Pagos</a></li>
-				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear Pago</a></li>						
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
-				<!-- EDITAR LUEGO.... AGREGUE LA LINEA DE ABAJO SOLO PARA VER LA LISTA DE VISITAS -->  
-				<li><a href="<%=request.getContextPath()%>/listaVisitas">Listado de Visitas</a></li>
-				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Lista de Usuarios</a></li>
-				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Usuario </a></li>
-				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
-				
+				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
 									
 				</ul>
 			</nav>

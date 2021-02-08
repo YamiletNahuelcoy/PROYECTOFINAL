@@ -20,10 +20,9 @@
 				class="icon-menu"></label>
 			<nav class="menu">
 				<ul>
-				<li><a href="<%=request.getContextPath()%>/">Inicio</a></li>
 				<li><a href='<%=request.getContextPath()%>/listaCapacitaciones'>Listado de Capacitaciones</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
-				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
+				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
 				</ul>
 			</nav>
 		</div>

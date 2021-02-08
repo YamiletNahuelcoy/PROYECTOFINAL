@@ -14,8 +14,8 @@
 <body>
 
 	<header id="seccion">
-		<h2>Bienvenida Daniela Segura	
-		</h2>
+		<h1>Bienvenida Daniela Segura	</h1>
+		<h2>PERFIL ADMINISTRATIVO</h2>
 		<div class="content-menu">
 			<input type="checkbox" id="check"> <label class="icon-menu"
 				for="check"><img src="resources/iconos/icono-menu.png" alt=""
@@ -26,10 +26,13 @@
 	</header>
 	<fieldset class="cel- agrupar-t agrupar-e">
 		<ol>
-				<li><a href='<%=request.getContextPath()%>/listaCapacitaciones'>Listado de Capacitaciones</a></li>
-				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
-				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Listado de Usuarios</a></li>
+				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Nuevo Usuario</a></li>
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
+				
+		
 		</ol>
 
 	</fieldset>

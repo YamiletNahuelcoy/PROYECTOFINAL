@@ -226,10 +226,10 @@ function validaRut(campo) {
 function Listachequeo() {
 
 	c1 = document.getElementById("chek");
-	var text = "";
+	var text = "cheqnombre";
 	
 	if (c1.checked == true) {
-		var text = "<li>document.getElementById('cheqnombre') </li>";
+		var text = "<li>document.getElementById('cheqnombre')</li>";
 		
 		document.getElementById('chek9').innerHTML = 'Chequeos Seleccionados<ul>' + text;
 		
