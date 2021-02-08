@@ -47,7 +47,6 @@
 					 <td><input type="checkbox" name="checkbox" value="chek" id="chek" /></td>																		
 				</tr>
 			</c:forEach>
-
                 <tr>
                     <td colspan="3">
                         <input onclick="Listachequeo()" type="button" class="boton" value="Chequeo" name="cheq" id="Chequeo" >

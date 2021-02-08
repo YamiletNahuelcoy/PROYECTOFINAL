@@ -9,15 +9,27 @@
 
 	<!-- Páginas a las que va a poder acceder el usuario -->
 	<http auto-config="true">
-		<intercept-url pattern="/" access="permitAll" /><!-- Todos los usuarios van a poder acceder a la ruta raíz -->
-		<intercept-url pattern="/CrearCapacitacion" access="hasRole('ADMIN')" />
-		<intercept-url pattern="/procesacapacitacion" access="hasRole('ADMIN')" />
-		<intercept-url pattern="/listaCapacitaciones/**" access="hasRole('USUARIO')" />
-		<intercept-url pattern="/eliminar/**" access="hasRole('USUARIO')" />
-		<intercept-url pattern="/editar/**" access="hasRole('ADMIN')" />
-		<intercept-url pattern="/listaPagos/*" access="hasRole('ADMIN','USER')" />
-		
-			<form-login 
+		<intercept-url pattern="/" access="permitAll" /><!-- Todos los usuarios van a poder acceder a la ruta raíz -->		
+		<intercept-url pattern="/listaCapacitaciones/*" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/CrearCapacitacion/*" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/procesacapacitacion/*" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/editarAdministrativo/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/procesaeditar/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/Checklist/*" access="hasRole('PROFESIONAL')" />
+		<intercept-url pattern="/editarCliente/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/procesareditar/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/Contacto/*" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/recibiendocontacto/*" access="hasRole('CLIENTE')" />
+		<intercept-url pattern="/listaPagos/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/CrearPago/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/procesaPagos/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/editarProfesional/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/ProfesionalEditado/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/listaUsuarios/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/crearUsuario/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/procesausuario/*" access="hasRole('ADMINISTRATIVO')" />
+		<intercept-url pattern="/listaVisitas/*" access="hasRole('PROFESIONAL')" />
+		<form-login 
 				login-page="/login"
 				authentication-failure-url="/error"
 				       username-parameter="username"

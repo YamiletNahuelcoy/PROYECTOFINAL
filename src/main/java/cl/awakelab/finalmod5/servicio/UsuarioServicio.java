@@ -14,5 +14,6 @@ public interface UsuarioServicio {
 	
 	public Usuario obtenerUsuarioPorId(int idusuario);
 	
+		
 
 }

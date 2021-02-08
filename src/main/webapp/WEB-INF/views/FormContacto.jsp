@@ -21,9 +21,8 @@
 			<nav class="menu">
 				<ul>
 				<li><a href="<%=request.getContextPath()%>/">Inicio</a></li>
-				<li><a href="<%=request.getContextPath()%>/listaCapacitaciones">Listado de Capacitaciones</a></li>
+				<li><a href='<%=request.getContextPath()%>/listaCapacitaciones'>Listado de Capacitaciones</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
-				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Lista de Usuarios</a></li>	
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
 				</ul>
 			</nav>

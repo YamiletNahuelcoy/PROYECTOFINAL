@@ -32,5 +32,6 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 		return ur.findOne(idusuario);
 	}
 
+
 	
 }

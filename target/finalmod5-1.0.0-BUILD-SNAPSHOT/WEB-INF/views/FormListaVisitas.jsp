@@ -53,9 +53,8 @@
 				<td><c:out value="${lvis.getVislugar()}" /></td>
 				<td><c:out value="${lvis.getViscomentarios()}" /></td>
 				<td><c:out value="${lvis.getCliente_rutcliente()}" /></td>
-				<td><a onclick="chequeo()" href="<%=request.getContextPath()%>/Checklist">Responder Checklist </a>
-				</td>	
-               
+				 <td>
+                    <input type="button" value="Chequear Visita" name="cheq" id="chek1" onclick="chequeo()"></td>				             
 			</tr>
 			
 			</c:forEach>	

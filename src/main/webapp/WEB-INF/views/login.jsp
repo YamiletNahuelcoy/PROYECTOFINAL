@@ -18,16 +18,16 @@
 		out.println("<h4 style=\"color:red\">Credenciales inválidas. Por favor vuelva a intentar!!</h4>");
 	}
 	%>
-	<form name='loginForm' action="<c:url value='login' />" method='POST'>
+	<form name='loginForm' action="<c:url value='ValidarSesion' />" method='POST'>
 
 		<table>
 			<tr>
 				<td>Usuario:</td>
-				<td><input type='text' name='username' value=''></td>
+				<td><input type='text' name='username' id='username' value=''></td>
 			</tr>
 			<tr>
 				<td>Password:</td>
-				<td><input type='password' name='password' /></td>
+				<td><input type='password' name='password' id='password' /></td>
 			</tr>
 			<tr>
 				<td><input name="submit" type="submit" value="Ingresar" /></td>
