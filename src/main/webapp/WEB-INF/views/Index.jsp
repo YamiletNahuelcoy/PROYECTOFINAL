@@ -19,16 +19,39 @@
 				for="check"><img src="resources/iconos/icono-menu.png" alt=""
 				class="icon-menu"></label>
 
-       <nav class="menu">
+       <nav class="menuCSS3">
+       <ul>
+			<li><a href="">PERFIL CLIENTE</a>			
 				<ul>
-				<li><a href="<%=request.getContextPath()%>/login">LOGIN</a></li>
-							
+				<li><a href='<%=request.getContextPath()%>/listaCapacitaciones'>Listado de Capacitaciones</a></li>
+				<li><a href="<%=request.getContextPath()%>/CrearCapacitacion">Crear Capacitaciones</a></li>	
+				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
+				</ul>
+			</li>
+			<li><a href="">PERFIL ADMINISTRATIVO</a>
+				<ul>
+				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
+				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Listado de Usuarios</a></li>
+				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Nuevo Usuario</a></li>
+				</ul>
+
+			</li>
+		<li><a href="">PERFIL PROFESIONAL</a>
+				<ul>
+				<li><a href="<%=request.getContextPath()%>/listaVisitas">Listado de Visitas</a></li>
+				</ul>
+
+			</li>		
+		
+				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>
 				</ul>
 			</nav>
       
         </div>
     </header>
-    <fieldset class="cel- agrupar-t agrupar-e">
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <fieldset class="cel- agrupar-t agrupar-e" style="margin-top: 100px">
         <section>
 
                 <h3>¿CUÁL ES EL OBJETIVO DEL SISTEMA DE INFORMACIÓN?</h3>

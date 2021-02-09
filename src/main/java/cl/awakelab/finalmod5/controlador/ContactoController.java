@@ -34,6 +34,6 @@ public class ContactoController {
 		System.out.println("Mensaje:" + " "+ mensaje);
 				
 		
-		return "/msgcreacion";
+		return "FormSesionCliente";
 	}
 }

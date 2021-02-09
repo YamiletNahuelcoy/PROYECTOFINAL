@@ -111,7 +111,8 @@
 				<td></td>
 				<td>Profesional</td>	
 				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarProfesional/<c:out value="${lp.getUsuario_idusuario()}" />'>Editar</a>
-			</tr>			
+			</tr>		
+				
 			</c:forEach>	
 	</table>
 

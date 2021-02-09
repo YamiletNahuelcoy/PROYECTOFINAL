@@ -20,7 +20,6 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
 				<li><a href='<%=request.getContextPath()%>/listaCapacitaciones'>Listado de Capacitaciones</a></li>
 				<li><a href="<%=request.getContextPath()%>/Contacto">Contacto</a></li>
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>					
@@ -31,14 +30,13 @@
 	<fieldset class="cel- agrupar-t agrupar-e">
 	<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesacapacitacion'>
 			<table class="cel- tablas-t tablas-e" >
-			
-			<tr><td>ID Capacitación</td><td><input type="text" name="txtid" id="txtid" /></td></tr>
-			<tr><td>Fecha de capacitación</td><td><input type="date" pattern="dd/mm/yyyy" name="txtfecha" id="txtfecha" /></td></tr>
-			<tr><td>Hora de capacitación</td><td><input type="text" name="txthora" id="txthora" /></td></tr>
-			<tr><td>Lugar</td><td><input type="text" name="txtlugar" id="txtlugar" /></td></tr>
-			<tr><td>Duración</td><td><input type="text" name="txtduracion" id="txtduracion" /></td></tr>
-			<tr><td>Rut del cliente</td><td><input type="text" name="rutcliente" id="rutcliente" /></td></tr>
-			<tr><td colspan="6"><input type="submit" name="btnguardar" id="btnguardar" value="Guardar Capacitación" /><br/></td></tr>
+			<tr><td>ID Capacitación</td><td><input type="text" name="txtid" id="txtid" required="required"/></td></tr>
+			<tr><td>Fecha de capacitación</td><td><input type="date" pattern="dd/mm/yyyy" name="txtfecha" id="txtfecha" required="required"/></td></tr>
+			<tr><td>Hora de capacitación</td><td><input type="text" id="txthora" placeholder="hh:mm:ss" required="required"/></td></tr>
+			<tr><td>Lugar</td><td><input type="text" name="txtlugar" id="txtlugar" required="required" /></td></tr>
+			<tr><td>Duración</td><td><input type="text" name="txtduracion" id="txtduracion"  required="required"/></td></tr>
+			<tr><td>Rut del cliente</td><td><input required aria-required="true" name="rutCliente"  id="rutCliente"></td></tr>
+			<tr><td colspan="6"><input type="submit" name="btnguardar" id="btnguardar" value="Guardar Capacitación" required="required" onclick="ingresaDatoscap()"/><br/></td></tr>
 			
 			</table>
 		</form>

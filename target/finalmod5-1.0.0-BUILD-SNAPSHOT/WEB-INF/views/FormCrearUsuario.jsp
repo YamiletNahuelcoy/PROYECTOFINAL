@@ -20,10 +20,6 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
-				<li><a href='<%=request.getContextPath()%>/editarAdministrativo'>Editar Administrativo</a></li>
-				<li><a href="<%=request.getContextPath()%>/editarCliente">Editar Cliente</a></li>	
-				<li><a href="<%=request.getContextPath()%>/editarProfesional">Editar Profesional</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Listado de Usuarios</a></li>
@@ -36,18 +32,18 @@
 	<form method="post" action='<c:out value="${pageContext.request.contextPath}" />/procesausuario'>
 			<table class="cel- tablas-t tablas-e" >
 			
-			<tr><td>ID Usuario</td><td><input type="text" name="txtid" id="txtid" /></td></tr>
-			<tr><td>Rut</td><td><input type="text" name="txtrut" id="txtrut" /></td></tr>
-			<tr><td>Nombre</td><td><input type="text" name="txtnombre" id="txtnombre" /></td></tr>
-			<tr><td>Apellidos</td><td><input type="text" name="txtapellidos" id="txtapellidos" /></td></tr>
-			<tr><td>Fecha de nacimiento</td><td><input type="date" pattern="dd/mm/yyyy" name="txtfnac" id="txtfnac" /></td></tr>
+			<tr><td>ID Usuario</td><td><input type="text" name="txtid" id="txtid" required="required"/></td></tr>
+			<tr><td>Rut</td><td><input type="text" name="txtrut" id="txtrut" required="required"/></td></tr>
+			<tr><td>Nombre</td><td><input type="text" name="txtnombre" id="txtnombre" required="required"/></td></tr>
+			<tr><td>Apellidos</td><td><input type="text" name="txtapellidos" id="txtapellidos" required="required"/></td></tr>
+			<tr><td>Fecha de nacimiento</td><td><input type="date" pattern="dd/mm/yyyy" name="txtfnac" id="txtfnac" required="required"/></td></tr>
 			<tr><td >Tipo de usuario</td>
-				<td ><input type="radio" name="txttipouser" value="Cliente"id="Cliente"  />Cliente 
+				<td ><input type="radio" name="txttipouser" value="Cliente"id="Cliente" required="required" />Cliente 
 					<input type="radio" name="txttipouser" value="Profesional" id="Profesional" />Profesional
 					<input type="radio" name="txttipouser" value="Administrativo" id="Administrativo" />Administrativo	</td></tr>
-			<tr><td>Login</td><td><input type="text" name="txtlogin" id="txtlogin" /></td></tr>
-			<tr><td>Clave</td><td><input type='password' name='password' id="password" /></td></tr>
-			<tr><td colspan="2"><input type="submit" name="btnguardar" id="btnguardar" value="Crear Usuario" /><br/></td></tr>
+			<tr><td>Login</td><td><input type="text" name="txtlogin" id="txtlogin" required="required"/></td></tr>
+			<tr><td>Clave</td><td><input type='password' name='password' id="password" required="required"/></td></tr>
+			<tr><td colspan="2"><input type="submit" name="btnguardar" id="btnguardar" value="Crear Usuario" onclick="ingresaDatosUser()"/><br/></td></tr>
 			
 			</table>
 		</form>

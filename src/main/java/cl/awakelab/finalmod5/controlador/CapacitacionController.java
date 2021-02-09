@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.awakelab.finalmod5.modelo.Capacitacion;
+import cl.awakelab.finalmod5.modelo.Cliente;
 import cl.awakelab.finalmod5.servicio.CapacitacionServicio;
+import cl.awakelab.finalmod5.servicio.ClienteServicio;
 
 
 
@@ -23,6 +25,9 @@ public class CapacitacionController {
 	
 	@Autowired
 	CapacitacionServicio cs;
+	@Autowired
+	ClienteServicio clienteserv;
+	
 	private static final Logger logger = LoggerFactory.getLogger(CapacitacionController.class);
 	
 	@RequestMapping(value="/listaCapacitaciones", method = RequestMethod.GET)
@@ -35,6 +40,13 @@ public class CapacitacionController {
 		
 		return "FormListarCapacitaciones";
 	}	
+	
+	@RequestMapping(value="/listaclientecap", method = RequestMethod.GET)
+	public String listaclicap(Model model) {
+		List<Cliente> listaclicap = clienteserv.obtenerCliente();
+		model.addAttribute("liscc",listaclicap);
+		return "FormCrearCapacitacion";
+	}
 	
 	@RequestMapping(value="/CrearCapacitacion", method = RequestMethod.GET)
 	public String crearCapacitacion(Model model) {

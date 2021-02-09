@@ -22,7 +22,6 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/Checklist'>Seleccionar Chequeos</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaVisitas">Listado de Visitas</a></li>	
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
 				</ul>
@@ -40,15 +39,16 @@
 				<c:forEach items="${verchecklist}" var="ch">
 				<tr>
 					<td><c:out value="${ch.getIdchequeo()}" /></td>
-					<td id="cheqnombre"><c:out value="${ch.getCheqnombre()}" /></td>
-					 <td><input type="checkbox" name="checkbox" value="chek" id="chek" /></td>																		
+					<td id="cheqnombre" ><c:out value="${ch.getCheqnombre()}" /></td>
+					 <td><input type="checkbox" name="checkbox" value="<c:out value='${ch.getCheqnombre()}'/>" id="checkbox" /></td>																		
 				</tr>
 			</c:forEach>
                 <tr>
                     <td colspan="3">
-                        <input onclick="Listachequeo()" type="button" class="boton" value="Chequeo" name="cheq" id="Chequeo" >
+                        <input onclick="verificarCheckbox()"  type="button" class="boton" value="Chequeo" name="cheq" id="Chequeo" >
 
-                        <div id="chek9" class="lista"></div>
+                        <div id="mensaje" class="lista"></div>
+                                               
                     </td>
                 </tr>
             </table>

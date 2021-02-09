@@ -34,7 +34,7 @@
 		<form method="post" action='<c:out value="${pageContext.request.contextPath}"/>/ProfesionalEditado'>
 			<table class="tablausr-t tablausr-e">	
 					<tr><td>Id de Usuario</td><td><input type="number" name="txtiduser" id="txtiduser" value='<c:out value="${us.getIdUsuario()}" />' readonly="readonly"  /></td></tr>
-					<tr><td>Id del Profesional</td><td><input type="number" name="txtidprof" id="txtidprof" value='<c:out value="${pr.getProfTelefono()}" />'/></td></tr>				
+					<tr><td>Id del Profesional</td><td><input type="number" name="txtidprof" id="txtidprof" value='<c:out value="${pr.getIdProfesional()}" />'/></td></tr>				
 					<tr><td >RUT</td><td><input type="text" name="txtrutprof" id="txtrutprof" value='<c:out value="${us.getUserrun()}" />' /></td></tr>
 					<tr><td>Nombre</td><td><input type="text" name="txtnomprof" id="txtnomprof" value='<c:out value="${us.getUsernombre()}" />' /></td></tr>
 					<tr><td>Apellidos</td><td><input type="text" name="txtapeprof" id="txtapeprof" value='<c:out value="${us.getUserapellidos()}" />' /></td></tr>

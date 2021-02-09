@@ -23,9 +23,6 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
-				<li><a href='<%=request.getContextPath()%>/editarAdministrativo'>Editar Administrativo</a></li>
-				<li><a href="<%=request.getContextPath()%>/editarProfesional">Editar Profesional</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Listado de Usuarios</a></li>
@@ -46,8 +43,8 @@
 					<tr><td>Teléfono</td><td><input type="text" name="txttelcliente" id="txttelcliente" value='<c:out value="${cl.getClitelefono()}" />'/></td></tr>
 					<tr><td>AFP</td><td><input type="text" name="txtafpcliente" id="txtafpcliente" value='<c:out value="${cl.getCliafp()}" />'/></td></tr>
 						
-					<tr><td>Sistema de Salud</td><td><select name="sisSalud" >
-						<option value= "Seleccione" value='<c:out value="${cl.getClisistemasalud()}" />'> Seleccione
+					<tr><td>Sistema de Salud</td><td><select required aria-required="true" name="sisSalud" >
+						<option value= "" value='<c:out value="${cl.getClisistemasalud()}" />'> Seleccione
 						<option value="1">Fonasa
 						<option value="2">Isapre</select></td></tr>
 						

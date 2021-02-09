@@ -22,7 +22,7 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/Checklist'>Seleccionar Chequeos</a></li>
+		
 				<li><a href="<%=request.getContextPath()%>/listaVisitas">Listado de Visitas</a></li>	
 				<li><a href="<%=request.getContextPath()%>/logout">Cerrar Sesión</a></li>				
 				</ul>

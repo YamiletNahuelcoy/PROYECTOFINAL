@@ -20,10 +20,6 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
-				<li><a href='<%=request.getContextPath()%>/editarAdministrativo'>Editar Administrativo</a></li>
-				<li><a href="<%=request.getContextPath()%>/editarCliente">Editar Cliente</a></li>	
-				<li><a href="<%=request.getContextPath()%>/editarProfesional">Editar Profesional</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaUsuarios">Listado de Usuarios</a></li>

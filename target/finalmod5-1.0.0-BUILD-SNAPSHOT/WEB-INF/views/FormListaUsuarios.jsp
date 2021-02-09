@@ -21,10 +21,6 @@
 
 			<nav class="menu">
 				<ul>
-				<li><a href='<%=request.getContextPath()%>/'>Inicio</a></li>
-				<li><a href='<%=request.getContextPath()%>/editarAdministrativo'>Editar Administrativo</a></li>
-				<li><a href="<%=request.getContextPath()%>/editarCliente">Editar Cliente</a></li>	
-				<li><a href="<%=request.getContextPath()%>/editarProfesional">Editar Profesional</a></li>
 				<li><a href="<%=request.getContextPath()%>/listaPagos">Listado de Pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/CrearPago">Crear pagos</a></li>
 				<li><a href="<%=request.getContextPath()%>/crearUsuario">Crear Nuevo Usuario</a></li>
@@ -115,7 +111,8 @@
 				<td></td>
 				<td>Profesional</td>	
 				<td><a href='<c:out value="${pageContext.request.contextPath}" />/editarProfesional/<c:out value="${lp.getUsuario_idusuario()}" />'>Editar</a>
-			</tr>			
+			</tr>		
+				
 			</c:forEach>	
 	</table>
 

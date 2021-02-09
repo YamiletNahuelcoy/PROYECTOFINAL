@@ -18,7 +18,7 @@
 		out.println("<h4 style=\"color:red\">Credenciales inválidas. Por favor vuelva a intentar!!</h4>");
 	}
 	%>
-	<form name='loginForm' action="<c:url value='ValidarSesion' />" method='POST'>
+	<form name='loginForm' action="<c:url value='login' />" method='POST'>
 
 		<table>
 			<tr>

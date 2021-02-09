@@ -19,6 +19,7 @@
 	<p><c:out value="${mensajes}" /></p><br/>
 	
 		<a href='<c:out value="${pageContext.request.contextPath}" />'>Ir a la página principal</a><br/>
+		
 
 </body>
 </html>
