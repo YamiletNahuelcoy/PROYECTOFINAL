@@ -49,15 +49,7 @@
 					<td><c:out value="${lc.getCapduracion()}" /></td>
 					<td><c:out value="${lc.getCliente_RutCliente()}" /></td>
 					
-					<td>
-					<input type="button" value="Eliminar" name="eliminar" onclick="location.href='<c:out value="${pageContext.request.contextPath}" />/eliminar/<c:out value="${lc.getiDCapacitacion()}" />'" />
 					
-				</td>
-				<td>
-				<input type="button" value="Editar" name="editar" onclick="location.href='<c:out value="${pageContext.request.contextPath}" />/editar/<c:out value="${lc.getiDCapacitacion()}" />'" />
-					<!--  <a href='<c:out value="${pageContext.request.contextPath}" />/editar/<c:out value="${lc.getiDCapacitacion()}" />'>Editar</a>-->
-									
-				</tr>
 			</c:forEach>
 
 		</table>

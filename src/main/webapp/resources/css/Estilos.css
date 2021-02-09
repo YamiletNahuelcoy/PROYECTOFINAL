@@ -398,7 +398,7 @@ a {
 		display: inline-block;
 		font-size: 20px;
 	}
-	.menuli-t {
+	.menuli-t, .menuCSS3 {
 		display: inline-block;
 		list-style: none;
 		padding: 0px;
@@ -449,7 +449,7 @@ a {
 		width: 100%;
 		float: none;
 	}
-	.menuul-e {
+	.menuul-e , .menuCSS3{
 		width: auto;
 	}
 	body {
